@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>picopico signage</title>
+    <title>pico pico signage</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico">
@@ -13,6 +13,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="bower_components/hifive/h5-1.1.14.css">
     <!-- endbuild -->
   </head>
   <body>
@@ -21,20 +22,32 @@
     <![endif]-->
 
 
-<h1>ピコピコサイネージ</h1>
-ドットイラストと　メッセージを　くみあわせて　きみだけの　かんばんを　つくろう！
-
-<div id="dotCanvas">
+<div id="headerArea">
+    <div id="menuButton"><img src="images/ic_menu.png"></div>
+    <div id="title">ピコピコサイネージ</div>
+    <!-- <div id="description">ドットイラストと　メッセージを　くみあわせて　きみだけの　かんばんを　つくろう！</div> -->
 </div>
+<div id="contentsArea">  
 
-<div id="clear">しょうきょする</div>
+    <div id="signageContainer">
+        <div id="dotCanvas"></div>
+        <div id="controllPanel">
+
+            <div id="clear" class="button">消去</div>
+            <div id="toggleColor" class="button">ペンの色：白</div>
+            <div id="message" class="form">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+            <div id="send" class="button">送信</div>
+        </div>
+    </div>
+</div>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
+        <!--
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -43,15 +56,15 @@
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
-
+    -->
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <link href="//code.htmlhifive.com/h5.css" rel="stylesheet">
 
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="//code.htmlhifive.com/ejs-h5mod.js"></script>
-        <script src="//code.htmlhifive.com/h5.dev.js"></script>
+            <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
+        <!-- <script src="//code.htmlhifive.com/h5.dev.js"></script> -->
+        <script src="bower_components/hifive/h5-1.1.14.js"></script>
+        <script src="bower_components/hifive/ejs-1.0.h5mod.js"></script>
         <script src="scripts/pageController.js"></script>
-        <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
 </html>
